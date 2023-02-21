@@ -8,8 +8,7 @@
       {% if page.url == doc.url %}
         {% continue %}
       {% endif %}
-
-      {% if doc.url ==  %}
+      
       {% assign linkname = doc.name | remove: '.md' | capitalize %}
       {% if linkname == 'index' %}
         {% assign linkname = 'Home' %}
