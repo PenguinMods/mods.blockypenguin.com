@@ -5,7 +5,7 @@
 <ul>
   {% for doc in doclist %}
     {% if doc.name contains '.md' %}
-      {% assign linkname = doc.name | remove: '.md' %}
+      {% assign linkname = doc.name | remove: '.md' | capitalize %}
       {% if linkname == 'index' %}
         {% assign linkname = 'Home' %}
       {% endif %}
