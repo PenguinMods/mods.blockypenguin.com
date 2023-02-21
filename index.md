@@ -5,12 +5,12 @@
 <ul>
   {% for doc in doclist %}
     {% if doc.name contains '.md' %}
-      {% assign linkname = doc.name | split: '.' | slice: 0 %}
+      {% assign linkname = doc.name | remove: '.md' | remove: '.html' %}
       {% if linkname == 'index' %}
-        {% assign linkname = '' %}
+        {% assign linkname = 'Home' %}
       {% endif %}
 
-      {% assign linkname = doc.title | append: linkname %}
+      {% assign linkname = doc.title | append: ' - ' | append: linkname %}
 
       {% assign url = doc.url %}
       {% if doc.url contains '.html' %}
