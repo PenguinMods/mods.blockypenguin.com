@@ -10,7 +10,7 @@
         {% assign linkname = '' %}
       {% endif %}
 
-      {% assign linkname = doc.title linkname %}
+      {% assign linkname = doc.title | append: linkname %}
 
       {% assign url = doc.url %}
       {% if doc.url contains '.html' %}
