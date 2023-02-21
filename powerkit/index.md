@@ -1,9 +1,10 @@
+# PowerKit
+
 {% assign redirect_clarifier = page.name | remove: '.md' | capitalize %}
 {% if redirect_clarifier == 'Index' %}
   {% assign redirect_clarifier = 'Home' %}
 {% endif %}
 
-# PowerKit
 ## {{redirect_clarifier}}
 
 If you do not get redirected soon, click [here](https://www.curseforge.com/minecraft/mc-mods/labkit-powerkit)
