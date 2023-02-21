@@ -1,5 +1,6 @@
 remote_theme: pages-themes/slate
 title: 'PenguinMods'
 description: Browse mods by BlockyPenguin
-github.is_project_page: false
 lang: en-GB
+github:
+  is_project_page: false
