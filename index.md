@@ -25,4 +25,4 @@
       <li><a href="{{ site.baseurl }}{{ url }}">{{ linkname }}</a></li>
     {% endif %}
   {% endfor %}
-</ul
+</ul>
