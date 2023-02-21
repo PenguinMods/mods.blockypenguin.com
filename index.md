@@ -5,7 +5,7 @@
 <ul>
   {% for doc in doclist %}
     {% if doc.name contains '.md' %}
-      {% assign linkname = doc.name | remove: '.md' | remove: '.html' %}
+      {% assign linkname = doc.name | remove: '.md' %}
       {% if linkname == 'index' %}
         {% assign linkname = 'Home' %}
       {% endif %}
@@ -19,4 +19,4 @@
       <li><a href="{{ site.baseurl }}{{ url }}">{{ linkname }}</a></li>
     {% endif %}
   {% endfor %}
-</ul>
+</ul
