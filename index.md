@@ -10,7 +10,7 @@
       {% endif %}
       
       {% assign linkname = doc.name | remove: '.md' | capitalize %}
-      {% if linkname == 'index' %}
+      {% if linkname == 'Index' %}
         {% assign linkname = 'Home' %}
       {% endif %}
 
