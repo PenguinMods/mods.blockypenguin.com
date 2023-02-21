@@ -7,9 +7,16 @@
     {% if doc.name contains '.md' %}
       {% assign linkname = doc.name | split: "." | slice: 0 %}
       {% if linkname == "index" %}
-        {% assign linkname = doc.title %}
+        {% assign linkname = '' %}
       {% endif %}
-      <li><a href="{{ site.baseurl }}{{ doc.url }}">{{ linkname }}</a></li>
+
+      {% assign linkname = doc.title linkname %}
+
+      {% assign url = doc.url %}
+      {% if doc.url contains '.html' %}
+        {% assign url = url | split "." | slice: 0 %}
+      {% endif %}
+      <li><a href="{{ site.baseurl }}{{ url }}">{{ linkname }}</a></li>
     {% endif %}
   {% endfor %}
 </ul>
