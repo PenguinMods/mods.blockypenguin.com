@@ -21,7 +21,7 @@
         {% assign url = url | split: '.' | slice: 0 %}
       {% endif %}
       
-      <li><a href="{{ site.baseurl }}{{ url }}">{{ linkname }}</a></li>
+      <li><a href="{{ site.baseurl }}{{ url }}" target="_blank">{{ linkname }}</a></li>
     {% endif %}
   {% endfor %}
 </ul>
