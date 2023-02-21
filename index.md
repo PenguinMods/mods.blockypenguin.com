@@ -14,7 +14,7 @@
 
       {% assign url = doc.url %}
       {% if doc.url contains '.html' %}
-        {% assign url = url | split '.' | slice: 0 %}
+        {% assign url = doc.url | split '.' | slice: 0 %}
       {% endif %}
       <li><a href="{{ site.baseurl }}{{ url }}">{{ linkname }}</a></li>
     {% endif %}
