@@ -5,6 +5,11 @@
 <ul>
   {% for doc in doclist %}
     {% if doc.name contains '.md' %}
+      {% if page.url == doc.url %}
+        {% continue %}
+      {% endif %}
+
+      {% if doc.url ==  %}
       {% assign linkname = doc.name | remove: '.md' | capitalize %}
       {% if linkname == 'index' %}
         {% assign linkname = 'Home' %}
@@ -16,6 +21,7 @@
       {% if doc.url contains '.html' %}
         {% assign url = url | split: '.' | slice: 0 %}
       {% endif %}
+      
       <li><a href="{{ site.baseurl }}{{ url }}">{{ linkname }}</a></li>
     {% endif %}
   {% endfor %}
