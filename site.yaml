@@ -1,0 +1,6 @@
+name: PenguinMods
+tagline: Minecraft mods by BlockyPenguin # Anything catchier?
+base_url: https://mods.blockypenguin.com/
+dev_url: http://localhost:8000/
+assets:
+  - styles.css

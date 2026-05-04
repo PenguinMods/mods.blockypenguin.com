@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="<%= it.site.base_url %>">
+<% if(it.redirect) { %>
+    <meta http-equiv="refresh" content="5;url=<%= it.redirect %>">
+<% } %>
+    <title><%= it.title %></title>
+    
+    <meta name="description" content="<%= it.description %>">
+<% /* <meta name="theme-color" content="<!--TODO: Implement-->"> */ %>
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <%~ it.body %>
+
+    <footer class="footer">
+      Made with &lt;3, by BlockyPenguin.
+    </footer>
+  </body>
+</html>

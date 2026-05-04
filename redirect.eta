@@ -1,0 +1,21 @@
+<% layout("./layout", {
+  redirect: it.redirect.target,
+  title: `${it.mod.display_name} - ${it.redirect.display_name} | ${it.site.name}`,
+  description: `${it.mod.display_name}: ${it.mod.description} | ${it.site.name} - ${it.site.tagline}`
+}) %>
+
+<div class="card">
+  <h1><%= it.mod.display_name %></h1>
+  <h2><%= it.redirect.display_name %></h2>
+  <p><%= it.mod.description %></p>
+  
+  <p>Redirecting you to <a id="target" href="<%= it.redirect.target %>"><%=
+    new URL(it.redirect.target).hostname
+  %></a> in 5 seconds...</p>
+</div>
+
+<script>
+  setTimeout(() => {
+    window.location.replace("<%= it.redirect.target %>");
+  }, 5000);
+</script>

@@ -1,0 +1,19 @@
+{
+  "tasks": {
+    "build": "deno run --allow-read=. --allow-write=. --allow-env=DENO_DEPLOYMENT_ID build.ts"
+  },
+  "imports": {
+    "@bgub/eta": "jsr:@bgub/eta@^4.5.0",
+    "@std/fs": "jsr:@std/fs@^1.0.22",
+    "@std/path": "jsr:@std/path@^1.1.4",
+    "@std/yaml": "jsr:@std/yaml@^1.0.11"
+  },
+  "fmt": {
+    "lineWidth": 90,
+    "newLineKind": "lf",
+    "operatorPosition": "nextLine",
+    "quoteProps": "asNeeded",
+    "singleBodyPosition": "maintain",
+    "useBraces": "maintain"
+  }
+}

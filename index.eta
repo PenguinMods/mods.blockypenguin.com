@@ -1,0 +1,19 @@
+<% layout("./layout", {
+  title: it.site.name,
+  description: it.site.tagline
+}) %>
+
+<h1><%= it.site.name %></h1>
+<p><%= it.site.tagline %></p>
+
+<% it.mods.forEach(mod => { %>
+<div class="card" style="margin-bottom: 1rem;">
+  <h2><a href="/<%= mod.id %>/"><%= mod.display_name %></a></h2>
+  <p><%= mod.description %></p>
+  <ul class="links">
+    <% mod.redirects.forEach(redirect => { %>
+    <li><a href="/<%= mod.id %>/<%= redirect.id %>/"><%= redirect.display_name %></a></li>
+    <% }) %>
+  </ul>
+</div>
+<% }) %>

@@ -1,0 +1,11 @@
+ender_beds:
+  display_name: Ender Beds
+  description: Ender beds that allow for an easy return to your spawnpoint.
+  issues: https://github.com/PenguinMods/EnderBeds/issues
+  source: https://github.com/PenguinMods/EnderBeds
+
+wired:
+  display_name: Wired
+  description: A new kind of computer mod
+  issues: https://github.com/PenguinMods/Wired/issues
+  source: https://github.com/PenguinMods/Wired
